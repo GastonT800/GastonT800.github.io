@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta Gym</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clases.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SPARTA GYM</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="clases.html">Clases</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h3>Musculación</h3>
+                                <ul>
+                                  <li><a href="#">Pesas</a></li>
+                                  <li><a href="#">Hipertrofia</a></li>
+                                  <li><a href="#">Entrenamiento Funcional</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-column">
+                                <h3>Cardio</h3>
+                                <ul>
+                                  <li><a href="#">Spinning</a></li>
+                                  <li><a href="#">CrossFit</a></li>
+                                  <li><a href="#">Boxeo</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-column">
+                                <h3>Bienestar</h3>
+                                <ul>
+                                  <li><a href="#">Yoga</a></li>
+                                  <li><a href="#">Meditación</a></li>
+                                  <li><a href="#">Pilates</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-secondary">
+            <h1>Nuestras Clases</h1>
+            <p>Descubre la variedad de clases que ofrecemos para todos los niveles.</p>
+        </section>
+
+        <section class="classes-grid-section">
+            <h2>Todas las Clases</h2>
+        
+            <!-- Botones de filtro -->
+            <div class="filter-buttons">
+                <button data-filter="all" class="filter-btn active">Todas</button>
+                <button data-filter="yoga" class="filter-btn">Yoga</button>
+                <button data-filter="musculacion" class="filter-btn">Musculación</button>
+                <button data-filter="crossfit" class="filter-btn">CrossFit</button>
+                <button data-filter="spinning" class="filter-btn">Spinning</button>
+            </div>
+        
+            <!-- Contenedor de clases -->
+            <div class="classes-grid">
+                <!-- Yoga -->
+                <div class="class-card" data-category="yoga">
+                    <img src="assets/Hatha Yoga.png" alt="Yoga">
+                    <h3>Hatha Yoga</h3>
+                    <p>Mejora la flexibilidad y reduce el estrés con posturas suaves.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="yoga">
+                    <img src="assets/Vinyasa Yoga.png" alt="Yoga">
+                    <h3>Vinyasa Yoga</h3>
+                    <p>Fluye con el ritmo de tu respiración en una práctica activa.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="yoga">
+                    <img src="assets/Yoga Restaurativo.png" alt="Yoga">
+                    <h3>Yoga Restaurativo</h3>
+                    <p>Relajación profunda con posturas pasivas y accesorios.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+        
+                <!-- Musculación -->
+                <div class="class-card" data-category="musculacion">
+                    <img src="assets/Musculación Básica.png" alt="Musculación">
+                    <h3>Musculación Básica</h3>
+                    <p>Ejercicios con peso corporal para principiantes.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="musculacion">
+                    <img src="assets/Entrenamiento Funcional.png" alt="Musculación">
+                    <h3>Entrenamiento Funcional</h3>
+                    <p>Combina fuerza y estabilidad para un cuerpo fuerte y ágil.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="musculacion">
+                    <img src="assets/Hipertrofia Avanzada.png" alt="Musculación">
+                    <h3>Hipertrofia Avanzada</h3>
+                    <p>Enfocado en el aumento de masa muscular.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+        
+                <!-- CrossFit -->
+                <div class="class-card" data-category="crossfit">
+                    <img src="assets/CrossFit Iniciación.png">
+                    <h3>CrossFit Iniciación</h3>
+                    <p>Aprendé las bases del entrenamiento funcional de alta intensidad.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="crossfit">
+                    <img src="assets/WOD Intermedio.png">
+                    <h3>WOD Intermedio</h3>
+                    <p>Rutinas desafiantes para mejorar resistencia y fuerza.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="crossfit">
+                    <img src="assets/CrossFit Competencia.png" alt="CrossFit">
+                    <h3>CrossFit Competencia</h3>
+                    <p>Preparación específica para atletas avanzados.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+        
+                <!-- Spinning -->
+                <div class="class-card" data-category="spinning">
+                    <img src="assets/Spinning Básico.png" alt="Spinning">
+                    <h3>Spinning Básico</h3>
+                    <p>Pedaleá a tu ritmo en una clase apta para todos.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="spinning">
+                    <img src="assets/Spinning Cardio.png" alt="Spinning">
+                    <h3>Spinning Cardio</h3>
+                    <p>Alta intensidad para quemar calorías y mejorar tu resistencia.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+                <div class="class-card" data-category="spinning">
+                    <img src="assets/Spinning Nocturno.png" alt="Spinning">
+                    <h3>Spinning Nocturno</h3>
+                    <p>Terminá el día con energía y buena música.</p>
+                    <a href="#">Ver Detalles</a>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="schedule-section">
+            <h2>Horario Semanal</h2>
+            <div class="schedule-table-container">
+                <table class="timetable responsive-timetable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                            <th>Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Musculación</th>
+                            <td data-label="Lunes">8:00 - 9:30</td>
+                            <td data-label="Martes"></td>
+                            <td data-label="Miércoles">8:00 - 9:30</td>
+                            <td data-label="Jueves"></td>
+                            <td data-label="Viernes">8:00 - 9:30</td>
+                            <td data-label="Sábado">10:00 - 11:30</td>
+                            <td data-label="Domingo"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CrossFit</th>
+                            <td data-label="Lunes">9:30 - 11:00</td>
+                            <td data-label="Martes">9:30 - 11:00</td>
+                            <td data-label="Miércoles">9:30 - 11:00</td>
+                            <td data-label="Jueves">9:30 - 11:00</td>
+                            <td data-label="Viernes">9:30 - 11:00</td>
+                            <td data-label="Sábado">11:30 - 13:00</td>
+                            <td data-label="Domingo">Cerrado</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Yoga</th>
+                            <td data-label="Lunes">17:00 - 18:30</td>
+                            <td data-label="Martes">17:00 - 18:30</td>
+                            <td data-label="Miércoles">17:00 - 18:30</td>
+                            <td data-label="Jueves">17:00 - 18:30</td>
+                            <td data-label="Viernes">17:00 - 18:30</td>
+                            <td data-label="Sábado"></td>
+                            <td data-label="Domingo">16:00 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Spinning</th>
+                            <td data-label="Lunes">18:30 - 20:00</td>
+                            <td data-label="Martes">18:30 - 20:00</td>
+                            <td data-label="Miércoles">18:30 - 20:00</td>
+                            <td data-label="Jueves">18:30 - 20:00</td>
+                            <td data-label="Viernes">18:30 - 20:00</td>
+                            <td data-label="Sábado">13:00 - 14:30</td>
+                            <td data-label="Domingo"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="footer-grid">
+        
+            <!-- Suscripción -->
+            <div class="footer-column">
+                <h3 class="section-title centered-title">Sumate y se parte de nuestra comunidad</h3>
+                <p>Recibí promociones exclusivas, tips de entrenamiento y noticias de nuestras ultimas novedades</p>
+                <form class="newsletter-form">
+                <input type="email" placeholder="Tu email" required>
+                <button type="submit">Unirme</button>
+                </form>
+            </div>
+        
+            <!-- Redes sociales -->
+            <div class="footer-column">
+                <h3 class="section-title centered-title">Síguenos en nuestras redes sociales</h3>
+                <ul class="social-list">
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"> Instagram</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"> YouTube</a></li>
+                    <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"> Whatsapp</a></li>
+                </ul>
+            </div>
+        
+            <!-- Mapa -->
+            <div class="footer-column footer-mapa">
+                <h3 class="section-title centered-title">Dónde encontrarnos</h3>
+                <div class="mapa-responsive">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52551.71153306568!2d-58.4494125!3d-34.5919721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaddb5219293%3A0x4e25adcdba497479!2sThe%20Gym!5e0!3m2!1ses!2sar!4v1744373485157!5m2!1ses!2sar"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+    
+        </div>
+    
+        <div class="footer-copy">
+            © <span class="footer-year">2025</span> <strong>Sparta Gym</strong>. Pasión, fuerza y comunidad. Todos los derechos reservados por 
+            <span class="footer-author">Nick</span>.
+        </div>
+        
+    </footer>
+    <!--MODO NOCHE-->
+    <script src="script.js"></script>
+    <button class="toggle-theme" onclick="toggleMode()">🌙 Modo</button>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const classCards = document.querySelectorAll('.class-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reset botones activos
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-filter');
+
+                classCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

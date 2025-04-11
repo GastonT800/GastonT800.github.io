@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta Gym</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Botón modo oscuro/claro
+    <button onclick="toggleMode()" class="modo-toggle" aria-label="Cambiar entre modo claro y oscuro"> Cambiar modo</button>
+    -->
+    <!--mega-menú desplegable-->
+    <header>
+        <nav>
+            <div class="logo">SPARTA GYM</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="clases.html">Clases</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h3>Musculación</h3>
+                                <ul>
+                                  <li><a href="#">Pesas</a></li>
+                                  <li><a href="#">Hipertrofia</a></li>
+                                  <li><a href="#">Entrenamiento Funcional</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-column">
+                                <h3>Cardio</h3>
+                                <ul>
+                                  <li><a href="#">Spinning</a></li>
+                                  <li><a href="#">CrossFit</a></li>
+                                  <li><a href="#">Boxeo</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-column">
+                                <h3>Bienestar</h3>
+                                <ul>
+                                  <li><a href="#">Yoga</a></li>
+                                  <li><a href="#">Meditación</a></li>
+                                  <li><a href="#">Pilates</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Video de fondo-->
+    <section class="hero">
+        <video autoplay loop muted playsinline>
+          <source src="assets/Build.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+          <h1>Sparta Gym</h1>
+          <h3>Da el primer paso hacia una vida plena y saludable con nosotros</h3>
+          <a href="index.html" class="cta-button">Únete a Nosotros</a>
+        </div>
+      </section>
+
+    <!-- CLASES DESTACADAS -->
+    <section class="clases-destacadas">
+        <h2>Nuestras Clases</h2>
+        <div class="clases-grid">
+            <div class="card">
+                <header class="card-header">
+                    <img src="assets/Fuerza.png" alt="Musculación">
+                    <h3>Musculación</h3>
+                </header>
+                <section class="card-body">
+                    <p>Fortalece y tonifica todo tu cuerpo con nuestros entrenamientos guiados.</p>
+                    <p><strong>Profesor:</strong> Juan Pérez</p>
+                    <p><strong>Inscriptos:</strong> 45</p>
+                    <p><strong>Duración:</strong> Febrero - Julio</p>
+                </section>
+                <footer class="card-footer">
+                    <a href="#" class="cta-button">Inscribirse</a>
+                </footer> 
+            </div>
+            
+            <div class="card">
+                <header class="card-header">
+                    <img src="assets/Crossfit.png" alt="CrossFit">
+                    <h3>CrossFit</h3>
+                </header>
+                <section class="card-body">
+                    <p>Desafía tus límites con rutinas de alta intensidad para todos los niveles.</p>
+                    <p><strong>Profesor:</strong> Carla Gómez</p>
+                    <p><strong>Inscriptos:</strong> 30</p>
+                    <p><strong>Duración:</strong> Marzo - Agosto</p>
+                </section>
+                <footer class="card-footer">
+                    <a href="#" class="cta-button">Inscribirse</a>
+                </footer> 
+            </div>
+
+            <div class="card">
+                <header class="card-header">
+                    <img src="assets/Yoga.png" alt="Yoga">
+                    <h3>Yoga</h3>
+                </header>
+                <section class="card-body">
+                    <p>Mejorá tu flexibilidad, postura y equilibrio físico y mental.</p>
+                    <p><strong>Profesor:</strong> Lucía Ríos</p>
+                    <p><strong>Inscriptos:</strong> 50</p>
+                    <p><strong>Duración:</strong> Enero - Junio</p>
+                </section>
+                <footer class="card-footer">
+                    <a href="#" class="cta-button">Inscribirse</a>
+                </footer> 
+            </div>
+        </div>
+        <div class="clases-grid">
+            <div class="card">
+                <header class="card-header">
+                    <img src="assets/Spining.png" alt="Spinning">
+                    <h3>Spinning</h3>
+                </header>
+                <section class="card-body">
+                    <p>Entrenamiento cardiovascular intenso con buena música y energía.</p>
+                    <p><strong>Profesor:</strong> Diego Torres</p>
+                    <p><strong>Inscriptos:</strong> 40</p>
+                    <p><strong>Duración:</strong> Abril - Octubre</p>
+                </section>
+                <footer class="card-footer">
+                    <a href="#" class="cta-button">Inscribirse</a>
+                </footer> 
+            </div>
+            
+            <div class="card">
+                <header class="card-header">
+                    <img src="assets/Boxeo.png" alt="Boxeo">
+                    <h3>Boxeo</h3>
+                </header>
+                <section class="card-body">
+                    <p>Aprendé técnicas de defensa personal mientras mejorás tu condición física.</p>
+                    <p><strong>Profesor:</strong> Marcos Díaz</p>
+                    <p><strong>Inscriptos:</strong> 28</p>
+                    <p><strong>Duración:</strong> Marzo - Agosto</p>
+                </section>
+                <footer class="card-footer">
+                    <a href="#" class="cta-button">Inscribirse</a>
+                </footer> 
+            </div>
+            
+            <div class="card">
+                <header class="card-header">
+                    <img src="assets/Funcional.png" alt="Funcional">
+                    <h3>Funcional</h3>
+                </header>
+                <section class="card-body">
+                    <p>Entrenamientos dinámicos que combinan fuerza, resistencia y coordinación.</p>
+                    <p><strong>Profesor:</strong> Ana Martínez</p>
+                    <p><strong>Inscriptos:</strong> 35</p>
+                    <p><strong>Duración:</strong> Mayo - Noviembre</p>
+                </section>
+                <footer class="card-footer">
+                    <a href="#" class="cta-button">Inscribirse</a>
+                </footer> 
+            </div>            
+        </div>
+
+    </section>
+
+    <!-- CONTADOR ANIMADO -->
+    <section class="contador">
+        <div class="contador-item">
+          <p>Socios Satisfechos</p>
+          <span class="numero" data-target="750">0</span>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS DE NUESTROS SOCIOS-->
+    <div class="carrusel">
+        <div class="carrusel-contenedor">
+            <div class="testimonio">
+                <p>“Gracias a Sparta mejoré mi salud y autoestima. Los profes son geniales.”</p>
+                <h4>- Camila Fernández</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Ambiente espectacular y rutinas personalizadas. 100% recomendado.”</p>
+                <h4>- Martín López</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Encontré motivación y nuevos amigos. ¡Sparta es mi segunda casa!”</p>
+                <h4>- Valeria Ruiz</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Los entrenadores son muy profesionales y siempre atentos.”</p>
+                <h4>- Javier Molina</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Me encanta la energía del lugar, entrenar se volvió divertido.”</p>
+                <h4>- Romina Cáceres</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Conseguí resultados reales y duraderos. ¡Gracias Sparta!”</p>
+                <h4>- Esteban Quiroga</h4>
+            </div>
+            <div class="testimonio">
+                <p>“El mejor gimnasio del barrio. Limpio, equipado y seguro.”</p>
+                <h4>- Alejandra Vera</h4>
+            </div>
+            <div class="testimonio">
+                <p>“¡Ideal para entrenar en cualquier momento del día!”</p>
+                <h4>- Federico Ledesma</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Las clases grupales son lo más. Siempre motivan.”</p>
+                <h4>- Noelia Gómez</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Sparta tiene todo lo que necesito para mantenerme en forma.”</p>
+                <h4>- Tomás Duarte</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Mi lugar favorito para desconectarme y enfocarme en mí.”</p>
+                <h4>- Micaela Godoy</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Después de probar varios gimnasios, me quedo con Sparta.”</p>
+                <h4>- Luciano Navarro</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Ambiente respetuoso, diverso y lleno de buena onda.”</p>
+                <h4>- Brenda Sánchez</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Volví a confiar en mí gracias a los entrenamientos aquí.”</p>
+                <h4>- Mauro Castillo</h4>
+            </div>
+            <div class="testimonio">
+                <p>“El espacio es cómodo y moderno. Siempre actualizado.”</p>
+                <h4>- Paula Rodríguez</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Nunca pensé que entrenar iba a ser tan placentero.”</p>
+                <h4>- Facundo Ibarra</h4>
+            </div>
+            <div class="testimonio">
+                <p>“¡Los resultados se notan en poco tiempo!”</p>
+                <h4>- Lucía Paredes</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Siento que pertenezco a una gran comunidad fitness.”</p>
+                <h4>- Diego Franco</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Muy recomendable para todos los niveles.”</p>
+                <h4>- Cecilia Ruiz</h4>
+            </div>
+            <div class="testimonio">
+                <p>“Cada entrenamiento es un paso más hacia mi mejor versión.”</p>
+                <h4>- Andrés Méndez</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="footer-grid">
+        
+            <!-- Suscripción -->
+            <div class="footer-column">
+                <h3 class="section-title centered-title">Sumate y se parte de nuestra comunidad</h3>
+                <p>Recibí promociones exclusivas, tips de entrenamiento y noticias de nuestras ultimas novedades</p>
+                <form class="newsletter-form">
+                <input type="email" placeholder="Tu email" required>
+                <button type="submit">Unirme</button>
+                </form>
+            </div>
+        
+            <!-- Redes sociales -->
+            <div class="footer-column">
+                <h3 class="section-title centered-title">Síguenos en nuestras redes sociales</h3>
+                <ul class="social-list">
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"> Instagram</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"> YouTube</a></li>
+                    <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"> Whatsapp</a></li>
+                </ul>
+            </div>
+        
+            <!-- Mapa -->
+            <div class="footer-column footer-mapa">
+                <h3 class="section-title centered-title">Dónde encontrarnos</h3>
+                <div class="mapa-responsive">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52551.71153306568!2d-58.4494125!3d-34.5919721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaddb5219293%3A0x4e25adcdba497479!2sThe%20Gym!5e0!3m2!1ses!2sar!4v1744373485157!5m2!1ses!2sar"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+    
+        </div>
+    
+        <div class="footer-copy">
+            © <span class="footer-year">2025</span> <strong>Sparta Gym</strong>. Pasión, fuerza y comunidad. Todos los derechos reservados por 
+            <span class="footer-author">Nick</span>.
+        </div>
+        
+    </footer>
+  
+    <script src="script.js"></script>
+    <button class="toggle-theme" onclick="toggleMode()">🌙 Modo</button>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+
+</body>
+</html>
