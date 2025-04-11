@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #e0e0e0;
+    --accent-color: #0EF233C;
+    --secondary-accent: #B300FF;
+    --card-bg: #121212;
+    --card-border: #39FF14;
+    --background-alt: #f9f9f9;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #111;
+    --accent-color: #0077FF;
+    --secondary-accent: #ff4081;
+    --card-bg: #f0f0f0;
+    --card-border: #0077FF;
+}
+
+.hero-secondary {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent));
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-secondary h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-secondary p {
+    font-size: 1.2rem;
+}
+
+.classes-filter {
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-top: 2px solid var(--card-border);
+    border-bottom: 2px solid var(--card-border);
+    text-align: center;
+}
+
+.classes-filter h2 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.classes-filter form label {
+    margin: 0 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.classes-grid-section {
+    padding: 2rem;
+}
+
+.classes-grid-section h2 {
+    text-align: center;
+    color: var(--secondary-accent);
+    margin-bottom: 2rem;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.class-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+.class-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.class-card h3 {
+    padding: 1rem;
+    color: var(--accent-color);
+}
+
+.class-card p {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.class-card a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.class-card a:hover {
+    background-color: var(--secondary-accent);
+    color: #fff;
+}
+
+/*horarios de las clases*/
+.responsive-timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.responsive-timetable th,
+.responsive-timetable td {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.responsive-timetable thead {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.responsive-timetable td.closed {
+    color: red;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .responsive-timetable,
+    .responsive-timetable thead,
+    .responsive-timetable tbody,
+    .responsive-timetable th,
+    .responsive-timetable td,
+    .responsive-timetable tr {
+        display: block;
+    }
+
+    .responsive-timetable thead {
+        display: none;
+    }
+
+    .responsive-timetable tr {
+        margin-bottom: 2rem;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 1rem;
+    }
+
+    .responsive-timetable td,
+    .responsive-timetable th {
+        padding: 0.5rem;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+
+    .responsive-timetable td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+
+    .responsive-timetable td:last-child {
+        border-bottom: none;
+    }
+
+    .responsive-timetable th[scope="row"] {
+        background-color: var(--background-alt);
+        font-size: 1.1rem;
+        border-bottom: 2px solid var(--accent-color);
+        margin-bottom: 1rem;
+    }
+}
+
+
+/*transicion de cards*/
+.class-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.class-card:hover {
+    border-color: var(--accent-color);
+}
+
+.hero-secondary {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent));
+    padding: 6rem 2rem 5rem;
+}
+
+
+/*filtrado*/
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color, #e63946);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #a4161a;
+}
+
+.filter-btn.active {
+    background-color: #1d3557;
+}

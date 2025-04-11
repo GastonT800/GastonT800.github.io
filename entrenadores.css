@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #e0e0e0;
+    --accent-color: #0EF233C;
+    --secondary-accent: #B300FF;
+    --card-bg: #121212;
+    --card-border: #39FF14;
+    --background-alt: #f9f9f9;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #111;
+    --accent-color: #0077FF;
+    --secondary-accent: #ff4081;
+    --card-bg: #f0f0f0;
+    --card-border: #0077FF;
+}
+
+.hero-secondary {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent));
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-secondary h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-secondary p {
+    font-size: 1.2rem;
+}
+
+/* SECCIÓN ENTRENADORES */
+
+.hero-secondary {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--primary-color, #222);
+    color: var(--text-light, #fff);
+  }
+  
+  .equipo-entrenadores {
+    padding: 2rem;
+    background-color: var(--bg-color, #f4f4f4);
+    text-align: center;
+  }
+  
+  .grid-entrenadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Tarjetas Flip */
+  
+  .flip-card {
+    background: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .flip-front {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .flip-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  
+  .flip-front h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  
+  .flip-back {
+    background-color: #1c1c1c;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  /* Barras de habilidades */
+  
+  .skills {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .skills p {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+  }
+  
+  .bar {
+    background-color: #444;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 10px;
+    width: 100%;
+  }
+  
+  .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+    animation: fill-bar 1s ease-out forwards;
+  }
+  
+  @keyframes fill-bar {
+    from { width: 0; }
+    to { width: var(--final-width, 80%); }
+  }
+  
+  /* Estrellas de rating */
+  
+  .rating {
+    margin-top: 1rem;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #ffc107;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .star:hover {
+    transform: scale(1.3);
+  }
+  

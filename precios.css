@@ -1,0 +1,209 @@
+:root {
+    --bg-dark: #0d0d0d;
+    --text-light: #f0f0f0;
+    --highlight: #39FF14;
+    --secondary: #B300FF;
+    --card-dark: #1a1a1a;
+    --border-glow: 0 0 10px var(--highlight);
+}
+
+:root.light-mode {
+    --bg-dark: #ffffff;
+    --text-light: #111111;
+    --highlight: #0077FF;
+    --secondary: #FF4081;
+    --card-dark: #f3f3f3;
+    --border-glow: 0 0 10px var(--highlight);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---- Hero ---- */
+.hero-secondary {
+    background: linear-gradient(145deg, var(--highlight), var(--secondary));
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-secondary h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-secondary p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ---- Sección ---- */
+.pricing-section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ---- Toggle ---- */
+.toggle-prices {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+ 
+
+.toggle-label {
+    background-color: var(--card-dark);
+    border: 2px solid var(--highlight);
+    border-radius: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.toggle-label .slider {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.price.anual {
+    display: none;
+}
+
+.toggle-input:checked + .toggle-label .slider {
+    transform: translateX(100%);
+}
+
+/* ---- Cards ---- */
+.pricing-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.pricing-card {
+    background-color: var(--card-dark);
+    border: 2px solid transparent;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 transparent;
+}
+
+.pricing-card:hover {
+    border-color: var(--highlight);
+    box-shadow: var(--border-glow);
+    transform: translateY(-10px);
+}
+
+.pricing-card img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card .price {
+    font-size: 1.2rem;
+    color: var(--highlight);
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.price.mensual { display: inline-block; }
+.toggle-input:checked ~ .pricing-section .price.mensual { display: none; }
+.toggle-input:checked ~ .pricing-section .price.anual { display: inline-block; }
+
+/* ---- Listado y Botón ---- */
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.pricing-card ul li {
+    margin: 0.5rem 0;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.pricing-card ul li::before {
+    content: '✔';
+    color: var(--highlight);
+    position: absolute;
+    left: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--highlight);
+    color: #000;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2ecc71;
+}
+
+/* ---- Tooltips ---- */
+.tooltip {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dotted var(--text-light);
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
